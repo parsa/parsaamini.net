@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}{% if page.title != 'Home' %} - {{ page.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site-core.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site-theme.css' | relative_url }}">
+  {% if page.title == 'Contact' %}
+  <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+  <script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
+  {% endif %}
+  <script src="{{ '/assets/js/site-navigation.js' | relative_url }}" defer></script>
+</head>
+
+<body dir="ltr" class="site-body" id="site-body">
+  <div class="page-background page-background-layer"></div>
+  <div class="page-wrapper">
+    <div
+      class="site-page page-stack transparent-header-theme page-shell page-layout page-theme page-navigation-layout page-content-layout">
+      {% include header.html %}
+      {{ content }}
+      <div class="page-spacer page-spacer-inner"></div>
+      {% include footer.html %}
+    </div>
+  </div>
+</body>
+
+</html>

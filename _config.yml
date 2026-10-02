@@ -1,0 +1,25 @@
+# Site settings
+title: Parsa Amini
+description: Personal website of Parsa Amini
+url: "https://www.parsaamini.net"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Author
+author:
+  name: Parsa Amini
+
+# Public Apps Script web app URL (deploy Code.gs, then paste the /exec URL).
+contact_endpoint: "https://script.google.com/macros/s/AKfycbzmesRnGiXaT8iEcbIR_sESUC097-Ge8Wz_-8GN6ZL2EAmbaN8JwiD0937ItBxcPkGmJA/exec"
+
+# Exclude development files from the published site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts
+  - apps-script
+  - vendor
